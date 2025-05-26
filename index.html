@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tap untuk Suara @Yann</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #222;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 24px;
+      text-align: center;
+    }
+    .tap-area {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="tap-area" onclick="playSound()">
+    Tap layar untuk memutar suara
+  </div>
+
+  <audio id="tapSound" src="ini.mp3" preload="auto"></audio>
+
+  <script>
+    function playSound() {
+      const audio = document.getElementById('tapSound');
+      audio.currentTime = 0; // Mulai dari awal
+      audio.play();
+    }
+  </script>
+</body>
+</html>
